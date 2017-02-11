@@ -39,11 +39,11 @@ class ViewController: UIViewController {
                 print("['rss']['channel']['link'] : \(items["rss"]["channel"]["link"].value!)")
                 print("['rss']['channel']['item']['title'] : \(items["rss"]["channel"]["item"]["title"].value!)")
                 
-                /*print("\naffichage du dictionaire d'un item de notre flux RSS (on ne voit que le dernier pour le moment")
+                print("\naffichage du dictionaire d'un item de notre flux RSS (on ne voit que le dernier pour le moment")
                 print("____________________________________________________________")
                 //print("['rss']['channel']['item'] : \(items["rss"]["channel"]["item"].dico)")
                 parsingDicoValues(myDico: items["rss"]["channel"]["item"].dico)
-                */
+                
                 
                 
                 
