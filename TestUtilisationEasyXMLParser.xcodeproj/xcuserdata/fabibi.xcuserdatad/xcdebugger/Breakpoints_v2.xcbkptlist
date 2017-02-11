@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestUtilisationEasyXMLParser/ViewController.swift"
-            timestampString = "508492085.603191"
+            timestampString = "508521101.25024"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -52,31 +52,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../EasyXMLParser/EasyXMLParser/EasyXMLParser.swift"
-            timestampString = "508491966.353317"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "fill(collection:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../EasyXMLParser/EasyXMLParser/EasyXMLParserDelegate.swift"
-            timestampString = "508516003.288386"
+            timestampString = "508519125.0809"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "EasyXMLParserDelegate"
             landmarkType = "3">
          </BreakpointContent>
@@ -88,11 +72,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../EasyXMLParser/EasyXMLParser/EasyXMLParserDelegate.swift"
-            timestampString = "508516003.288386"
+            timestampString = "508519125.0809"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "parser(_:foundCharacters:)"
             landmarkType = "7">
          </BreakpointContent>

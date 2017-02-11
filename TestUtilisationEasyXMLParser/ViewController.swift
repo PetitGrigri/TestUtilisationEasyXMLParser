@@ -23,30 +23,38 @@ class ViewController: UIViewController {
                 
                 let parser = EasyXMLParser(withData: xmlData)
                 
-                //on recherche ici des item pouvant contenir un titre, un link ou des categories
-                let items = parser.fill(collection: [ "item" : ["title":"",
+                //ne fonctonne pas pour le moment, mais ca va venir
+                /*let items = parser.fill(collection: [ "item" : ["title":"",
                                                                 "link":"",
-                                                                "category": []]] )
+                                                                "category": []]] )*/
                 
+                //lancement de l'analyse complète du XML
+                let items = parser.parse()
                 
                 print ("\nAffichage du  résultat du fill (version collection) : ")
-                print("(il n'y a pas de filtre pour le moment se basant se basant sur la collection fournis par l'utilisateur) ")
+                print("(filtre à venir) ")
                 
-                
-                print("\naffichage d'élément précis : ")
+                //affichage d'éléments précis de items (ici on regarde des informations concernant channel
+                print("\naffichage d'éléments précis : ")
                 print("____________________________________________________________")
                 print("['rss']['channel']['title'] : \(items["rss"]["channel"]["title"].value!)")
                 print("['rss']['channel']['link'] : \(items["rss"]["channel"]["link"].value!)")
-                print("['rss']['channel']['item']['title'] : \(items["rss"]["channel"]["item"]["title"].value!)")
                 
-                print("\naffichage du dictionaire d'un item de notre flux RSS (on ne voit que le dernier pour le moment")
+                //affichage du dernier item du flux rss (c'est un comportement lié au subscrit de EasyXMLElement
+                print("\n\nAffichage du dernier item du flux rss")
                 print("____________________________________________________________")
-                //print("['rss']['channel']['item'] : \(items["rss"]["channel"]["item"].dico)")
-                parsingDicoValues(myDico: items["rss"]["channel"]["item"].dico)
+                print("['rss']['channel']['item'] : \(items["rss"]["channel"]["item"].name)")
                 
-                
-                
-                
+                //affichage de tout les article de notre flux rss (correspondant aux balises item)
+                print("\n\nAffiche de tout les items")
+                print("____________________________________________________________")
+                print("nombre d'items : \(items["rss"]["channel"]["item"].count())")
+                for item in items["rss"]["channel"]["item"].get() {
+                    print("\n\n")
+                    affichage(elements: item.enfants)
+                    print("                             *                              ")
+                    
+                }
                 //[String:EasyXMLElement]
                 
                 
@@ -78,31 +86,27 @@ class ViewController: UIViewController {
         
     }
 
+    //Cette fonction va être intégrer dans le EasyXmlElement
+    private func affichage(elements: [EasyXMLElement]) {
     
-    private func parsingDicoValues(myDico: [String:EasyXMLElement]) {
-    
-        let keys = myDico.keys;
-        
-        for key in keys {
-                if var tempoValue = myDico[key]?.value as? String {
-                    
-                    
-                    let sizeTempoValue = tempoValue.distance(from: tempoValue.startIndex, to: tempoValue.endIndex)
-                    
-                    
-                    let tempoValue2 = tempoValue.substring(to: tempoValue.index(    tempoValue.startIndex, offsetBy: ((sizeTempoValue  > 150) ? 150 : sizeTempoValue)))
-                    
-                    if (tempoValue.characters.count > tempoValue2.characters.count) {
-                        print ("\(key) : \n\(tempoValue2) ...")
-                    } else {
-                        print ("\(key) : \n\(tempoValue)")
-                    }
-                } else {
-                    print ("\(key) : VIDE")
-                }
+
+        for element in elements {
+            if var tempoValue = element.value as? String {
                 
-            
-            
+                
+                let sizeTempoValue = tempoValue.distance(from: tempoValue.startIndex, to: tempoValue.endIndex)
+                
+                
+                let tempoValue2 = tempoValue.substring(to: tempoValue.index(    tempoValue.startIndex, offsetBy: ((sizeTempoValue  > 80) ? 80 : sizeTempoValue)))
+                
+                if (tempoValue.characters.count > tempoValue2.characters.count) {
+                    print ("\(element.name) : \(tempoValue2) ...")
+                } else {
+                    print ("\(element.name) : \(tempoValue)")
+                }
+            } else {
+                print ("\(element.name) : VIDE")
+            }
         }
         
     
