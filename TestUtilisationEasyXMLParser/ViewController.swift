@@ -22,8 +22,20 @@ class ViewController: UIViewController {
                     let parser = EasyXMLParser(withData: utilisateurData)
                     let items = parser.parse()
                     
-                    print("\n\nAffiche de tout les items du fichier utilisateur.xml")
+                    print("\n\nAffiche des données du premier utilisateur")
                     print("____________________________________________________________")
+                    
+                    
+                    let utilisateur1 = items["utilisateurs"]["utilisateur"].get()[0]
+                    print("\n\n")
+                    
+                    affichage(elements: utilisateur1.enfants)
+                    
+                    print("                             *                              ")
+                    
+                    print("\n\nAffiche de tout les utilisateurs du fichier utilisateur.xml")
+                    print("____________________________________________________________")
+                    print("Dans le fichier il y a \(items["utilisateurs"]["utilisateur"].count()) utilisateur")
                     for item in items["utilisateurs"]["utilisateur"].get() {
                         print("\n\n")
                         affichage(elements: item.enfants)
