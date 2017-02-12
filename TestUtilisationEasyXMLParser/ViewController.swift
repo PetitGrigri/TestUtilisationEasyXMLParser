@@ -14,7 +14,25 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //utilisation d'un fichier
+        if let utilisateursFichier = Bundle.main.path(forResource: "utilisateurs", ofType: "xml") {
+            if let utilisateursString = try? String(contentsOfFile: utilisateursFichier) {
+                if let utilisateurData = utilisateursString.data(using: .utf8) {
+                    let parser = EasyXMLParser(withData: utilisateurData)
+                    let items = parser.parse()
+                    
+                    print("\n\nAffiche de tout les items du fichier utilisateur.xml")
+                    print("____________________________________________________________")
+                    for item in items["utilisateurs"]["utilisateur"].get() {
+                        print("\n\n")
+                        affichage(elements: item.enfants)
+                        print("                             *                              ")
+                        
+                    }
+                }
+            }
+        }
         
         
         //version collection

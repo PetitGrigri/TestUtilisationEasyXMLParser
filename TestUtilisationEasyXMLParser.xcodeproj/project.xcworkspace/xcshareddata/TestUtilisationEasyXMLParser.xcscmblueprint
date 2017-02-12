@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1FDBF1EC662CA1FBF2CE7B062EB773159DC05651",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "663D30E8CC20C1AFD876CB7BB9444F2BC9DFE40E" : 9223372036854775807,
+    "1FDBF1EC662CA1FBF2CE7B062EB773159DC05651" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "FD49F443-95F3-470A-B55A-73E69DE79718",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "663D30E8CC20C1AFD876CB7BB9444F2BC9DFE40E" : "EasyXMLParser\/",
+    "1FDBF1EC662CA1FBF2CE7B062EB773159DC05651" : "TestUtilisationEasyXMLParser\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TestUtilisationEasyXMLParser",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TestUtilisationEasyXMLParser.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/PetitGrigri\/TestUtilisationEasyXMLParser.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1FDBF1EC662CA1FBF2CE7B062EB773159DC05651"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Asifadam93\/EasyXMLParser.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "663D30E8CC20C1AFD876CB7BB9444F2BC9DFE40E"
+    }
+  ]
+}
