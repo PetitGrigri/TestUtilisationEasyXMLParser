@@ -19,34 +19,47 @@ class ViewController: UIViewController {
         if let utilisateursFichier = Bundle.main.path(forResource: "utilisateurs", ofType: "xml") {
             if let utilisateursString = try? String(contentsOfFile: utilisateursFichier) {
                 if let utilisateurData = utilisateursString.data(using: .utf8) {
-                    let parser = EasyXMLParser(withData: utilisateurData)
-                    let items = parser.parse()
                     
+                    let parser = EasyXMLParser(withData: utilisateurData)
+                    
+                    let items = parser.parse()
+                    let items2 = items.filter(filtre: ["utilisateur":["nom":"", "mail":""]])
+
+                    
+                    for item in items2 {
+                        print("\n\n")
+                        print(item.fullDescription())
+                        print("                             *                              ")
+                    }
+                    
+                    /*
+                    print(items);
+                    print(items.fullDescription())
                     print("\n\nAffiche des données du premier utilisateur")
                     print("____________________________________________________________")
                     
                     
                     let utilisateur1 = items["utilisateurs"]["utilisateur"].get()[0]
-                    print("\n\n")
-                    
-                    affichage(elements: utilisateur1.enfants)
+                    print(utilisateur1.fullDescription())
                     
                     print("                             *                              ")
                     
                     print("\n\nAffiche de tout les utilisateurs du fichier utilisateur.xml")
                     print("____________________________________________________________")
+                    
                     print("Dans le fichier il y a \(items["utilisateurs"]["utilisateur"].count()) utilisateur")
+                    
                     for item in items["utilisateurs"]["utilisateur"].get() {
                         print("\n\n")
-                        affichage(elements: item.enfants)
+                        print(item.fullDescription())
                         print("                             *                              ")
                         
-                    }
+                    }*/
                 }
             }
         }
         
-        
+        /*
         //version collection
         if let url = URL.init(string: "https://korben.info/feed") {
             if let xmlData = try? Data.init(contentsOf: url) {
@@ -67,8 +80,8 @@ class ViewController: UIViewController {
                 //affichage d'éléments précis de items (ici on regarde des informations concernant channel
                 print("\naffichage d'éléments précis : ")
                 print("____________________________________________________________")
-                print("['rss']['channel']['title'] : \(items["rss"]["channel"]["title"].value!)")
-                print("['rss']['channel']['link'] : \(items["rss"]["channel"]["link"].value!)")
+                print("['rss']['channel']['title'] : \(items["rss"]["channel"]["title"].value)")
+                print("['rss']['channel']['link'] : \(items["rss"]["channel"]["link"].value)")
                 
                 //affichage du dernier item du flux rss (c'est un comportement lié au subscrit de EasyXMLElement
                 print("\n\nAffichage du dernier item du flux rss")
@@ -81,7 +94,7 @@ class ViewController: UIViewController {
                 print("nombre d'items : \(items["rss"]["channel"]["item"].count())")
                 for item in items["rss"]["channel"]["item"].get() {
                     print("\n\n")
-                    affichage(elements: item.enfants)
+                    print(item.fullDescription())
                     print("                             *                              ")
                     
                 }
@@ -92,7 +105,7 @@ class ViewController: UIViewController {
             }
         }
 
-        
+        */
         
         //version objet
         /*
@@ -113,33 +126,6 @@ class ViewController: UIViewController {
         }
         */
         
-        
-    }
-
-    //Cette fonction va être intégrer dans le EasyXmlElement
-    private func affichage(elements: [EasyXMLElement]) {
-    
-
-        for element in elements {
-            if var tempoValue = element.value as? String {
-                
-                
-                let sizeTempoValue = tempoValue.distance(from: tempoValue.startIndex, to: tempoValue.endIndex)
-                
-                
-                let tempoValue2 = tempoValue.substring(to: tempoValue.index(    tempoValue.startIndex, offsetBy: ((sizeTempoValue  > 80) ? 80 : sizeTempoValue)))
-                
-                if (tempoValue.characters.count > tempoValue2.characters.count) {
-                    print ("\(element.name) : \(tempoValue2) ...")
-                } else {
-                    print ("\(element.name) : \(tempoValue)")
-                }
-            } else {
-                print ("\(element.name) : VIDE")
-            }
-        }
-        
-    
     }
     
     

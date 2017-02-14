@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestUtilisationEasyXMLParser/ViewController.swift"
-            timestampString = "508604593.159575"
+            timestampString = "508713030.357129"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -56,29 +56,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../EasyXMLParser/EasyXMLParser/EasyXMLParserDelegate.swift"
-            timestampString = "508519125.0809"
+            timestampString = "508703923.969409"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "EasyXMLParserDelegate"
             landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../EasyXMLParser/EasyXMLParser/EasyXMLParserDelegate.swift"
-            timestampString = "508519125.0809"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
-            landmarkName = "parser(_:foundCharacters:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
