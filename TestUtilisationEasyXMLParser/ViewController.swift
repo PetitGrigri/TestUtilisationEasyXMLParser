@@ -84,7 +84,7 @@ class ViewController: UIViewController {
                 print("Adress du flux RSS : \(letFluxRSS["rss"]["channel"]["link"].value)")
                 
                 print("Nombre d'article du flux RSS : \(letFluxRSS["rss"]["channel"]["item"].countSiblingWithSameName())")
-                print("Nombre de données pour le premier article : \(letFluxRSS["rss"]["channel"]["item"].countChildren()) \n\n")
+                print("Nombre de données pour le premier article : \(letFluxRSS["rss"]["channel"]["item"].countAllChildren()) \n\n")
                 
                 
                 print("   **********************************************")
